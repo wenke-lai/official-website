@@ -1,5 +1,6 @@
 import React from "react";
-import { TbMenu2 } from "react-icons/tb";
+import { TbMenu2, TbMoon, TbSun } from "react-icons/tb";
+import { useTheme } from "src/hooks/theme-hook";
 
 import { cn } from "src/utils/styles";
 
@@ -14,6 +15,8 @@ type LayoutHeaderProps = {
 };
 
 const LayoutHeader: React.FC<LayoutHeaderProps> = ({ title, navItems }) => {
+  const { theme, setTheme } = useTheme();
+
   return (
     <header
       className={cn(
@@ -30,7 +33,7 @@ const LayoutHeader: React.FC<LayoutHeaderProps> = ({ title, navItems }) => {
 
       {/* NavBar */}
       <nav className="hidden md:block">
-        <ul className="row gap-2 xl:gap-4">
+        <ul className="gap-2 row xl:gap-4">
           {navItems.map((item) => (
             <React.Fragment key={item.label}>
               <li>
@@ -45,6 +48,15 @@ const LayoutHeader: React.FC<LayoutHeaderProps> = ({ title, navItems }) => {
       <nav className="block md:hidden">
         <TbMenu2 />
       </nav>
+
+      <button
+        type="button"
+        onClick={() => {
+          theme === "dark" ? setTheme("light") : setTheme("dark");
+        }}
+      >
+        {theme === "dark" ? <TbSun /> : <TbMoon />}
+      </button>
     </header>
   );
 };
