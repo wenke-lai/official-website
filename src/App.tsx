@@ -1,11 +1,14 @@
-import Hero from "src/pages/hero";
-import { Layouts } from "src/pages/layouts";
+import Contact from "./pages/contact";
+import Hero from "./pages/hero";
+import { Layouts } from "./pages/layouts";
+import Portfolio from "./pages/portfolio";
+import Resume from "./pages/resume";
+import Services from "./pages/services";
 
 const navItems = [
-  { label: "about", href: "#about" },
-  { label: "education", href: "#education" },
-  { label: "skills", href: "#skills" },
-  { label: "projects", href: "#projects" },
+  { label: "services", href: "#services" },
+  { label: "resume", href: "#resume" },
+  { label: "portfolio", href: "#portfolio" },
   { label: "contact", href: "#contact" },
 ];
 
@@ -18,12 +21,21 @@ function App() {
           <Hero />
         </Layouts.ContentSection>
 
-        {/* PoC for demo */}
-        {navItems.map((item) => (
-          <div className="h-96 debug" id={item.label}>
-            {item.label}
-          </div>
-        ))}
+        <Layouts.ContentSection id="services">
+          <Services />
+        </Layouts.ContentSection>
+
+        <Layouts.ContentSection id="resume">
+          <Resume />
+        </Layouts.ContentSection>
+
+        <Layouts.ContentSection id="portfolio">
+          <Portfolio />
+        </Layouts.ContentSection>
+
+        <Layouts.ContentSection id="contact">
+          <Contact />
+        </Layouts.ContentSection>
 
         {/* PoC for demo */}
         <button

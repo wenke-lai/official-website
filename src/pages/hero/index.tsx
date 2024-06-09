@@ -2,6 +2,7 @@ import {
   TbBrandGithub,
   TbBrandLinkedin,
   TbBrandThreads,
+  TbFileTypePdf,
   TbMail,
 } from "react-icons/tb";
 import whoami from "src/assets/whoami.jpg";
@@ -24,11 +25,32 @@ const Hero = () => {
       <Avatar className="h-16 w-16">
         <AvatarImage src={whoami} alt="who am i" />
       </Avatar>
-      <div className="row gap-4">
+      <div className="row middle gap-4">
+        <button className="row middle center gap-2 border rounded-md">
+          <p>Download CV</p>
+          <TbFileTypePdf />
+        </button>
         <TbBrandGithub />
         <TbBrandThreads />
         <TbBrandLinkedin />
         <TbMail />
+      </div>
+      <div>
+        <div className="row middle gap-2">
+          {/* todo: auto calculate */}
+          <h6>10</h6>
+          <p>Years of experience</p>
+        </div>
+        <div className="row middle gap-2">
+          {/* todo: GitHub API? */}
+          <h6>7</h6>
+          <p>Projects completed</p>
+        </div>
+        <div className="row middle gap-2">
+          {/* todo: GitHub API? */}
+          <h6>987</h6>
+          <p>code commits</p>
+        </div>
       </div>
     </div>
   );
