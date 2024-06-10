@@ -7,7 +7,7 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ className, children }) => {
   return (
-    <div className={cn("container w-full min-h-dvh", className)}>
+    <div className={cn("container w-full min-h-dvh grid", className)}>
       {children}
     </div>
   );

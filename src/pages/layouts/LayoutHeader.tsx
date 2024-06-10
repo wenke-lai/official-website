@@ -36,11 +36,13 @@ const LayoutHeader: React.FC<LayoutHeaderProps> = ({
 
       {/* NavBar */}
       <nav className="hidden md:block">
-        <ul className="gap-2 row xl:gap-4">
+        <ul className="gap-2 capitalize row xl:gap-4">
           {navItems.map((item) => (
             <React.Fragment key={item.label}>
-              <li>
-                <a href={item.href}>{item.label}</a>
+              <li className="hover:underline">
+                <a href={item.href}>
+                  <h3>{item.label}</h3>
+                </a>
               </li>
             </React.Fragment>
           ))}
