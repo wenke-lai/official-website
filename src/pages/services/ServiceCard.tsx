@@ -19,7 +19,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         // size
         "h-full gap-4 p-4 min-h-32",
         // colors
-        "border rounded-md shadow-md border-secondary shadow-secondary-foreground/50",
+        "border-b-4  rounded-md  border-sky-300 ",
         // clickable
         " hover:cursor-pointer active:scale-95"
       )}
