@@ -1,3 +1,5 @@
+import { TbMoon, TbSun } from "react-icons/tb";
+import { useTheme } from "./hooks/theme-hook";
 import Contact from "./pages/contact";
 import Hero from "./pages/hero";
 import { Layouts } from "./pages/layouts";
@@ -13,11 +15,18 @@ const navItems = [
 ];
 
 function App() {
+  const { theme, setTheme } = useTheme();
+
   return (
-    <Layouts.Layout>
-      <Layouts.Header title="Wenke Studio" navItems={navItems} />
-      <Layouts.Content>
-        <Layouts.ContentSection id="hero" className="min-h-dvh">
+    <Layouts.Layout className="relative">
+      <Layouts.Header
+        className="absolute"
+        title="Wenke Studio"
+        navItems={navItems}
+      />
+
+      <Layouts.Content className="">
+        <Layouts.ContentSection id="hero" className="grid py-16 min-h-dvh">
           <Hero />
         </Layouts.ContentSection>
 
@@ -39,12 +48,22 @@ function App() {
 
         {/* PoC for demo */}
         <button
-          className="fixed right-8 bottom-8 rounded-full w-8 h-8 bg-sky-400 row middle center"
+          className="fixed w-8 h-8 border rounded-md right-8 bottom-8 row middle center border-foreground"
           onClick={() => window.scrollTo({ top: 0 })}
         >
           <p>up</p>
         </button>
+
+        <button
+          className="fixed w-8 h-8 border rounded-full right-8 bottom-24 row middle center border-foreground"
+          onClick={() =>
+            theme === "dark" ? setTheme("light") : setTheme("dark")
+          }
+        >
+          {theme === "dark" ? <TbSun /> : <TbMoon />}
+        </button>
       </Layouts.Content>
+
       <Layouts.Footer copyright="Copyright © 2024 Wenke Studio. All rights reserved." />
     </Layouts.Layout>
   );
