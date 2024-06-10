@@ -34,7 +34,7 @@ function App() {
           <Services />
         </Layouts.ContentSection>
 
-        <Layouts.ContentSection id="resume">
+        <Layouts.ContentSection id="resume" className="grid py-8">
           <Resume />
         </Layouts.ContentSection>
 

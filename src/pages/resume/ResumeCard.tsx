@@ -10,13 +10,12 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
   children,
 }) => {
   return (
-    <article>
+    <article className="min-h-[600px] grid grid-rows-[auto,1fr] divide-y divide-green-500 gap-2">
       <hgroup>
-        <h5>{title}</h5>
-        <p>{description}</p>
+        <h3 className="text-sky-500">{title}</h3>
+        <h4 className="py-2">{description}</h4>
       </hgroup>
-      <hr />
-      <div>{children}</div>
+      <div className="h-full p-4 overflow-y-auto bg-secondary">{children}</div>
     </article>
   );
 };
