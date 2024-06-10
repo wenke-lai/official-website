@@ -10,7 +10,7 @@ import { Avatar, AvatarImage } from "src/components/ui/avatar";
 
 const HeroInformation = () => {
   return (
-    <div className="order-1 md:order-0">
+    <div className="order-1 p-4 md:order-0 md:pl-16">
       <hgroup>
         <h2>Hi, I'm Wenke Lai</h2>
         <h3 className="text-green-500">Software Engineer</h3>

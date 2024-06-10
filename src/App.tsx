@@ -25,7 +25,7 @@ function App() {
         navItems={navItems}
       />
 
-      <Layouts.Content className="">
+      <Layouts.Content>
         <Layouts.ContentSection id="hero" className="grid py-16 min-h-dvh">
           <Hero />
         </Layouts.ContentSection>
@@ -38,7 +38,7 @@ function App() {
           <Resume />
         </Layouts.ContentSection>
 
-        <Layouts.ContentSection id="portfolio">
+        <Layouts.ContentSection id="portfolio" className="grid py-8">
           <Portfolio />
         </Layouts.ContentSection>
 
