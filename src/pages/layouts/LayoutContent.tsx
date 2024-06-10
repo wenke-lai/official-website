@@ -1,11 +1,15 @@
 import { cn } from "src/utils/styles";
 
 type LayoutContentProps = {
+  className?: string;
   children: React.ReactNode;
 };
 
-const LayoutContent: React.FC<LayoutContentProps> = ({ children }) => {
-  return <main>{children}</main>;
+const LayoutContent: React.FC<LayoutContentProps> = ({
+  className,
+  children,
+}) => {
+  return <main className={cn(className)}>{children}</main>;
 };
 
 type LayoutContentSectionProps = {
@@ -16,7 +20,7 @@ type LayoutContentSectionProps = {
 
 export const LayoutContentSection: React.FC<LayoutContentSectionProps> = ({
   id,
-  className = "h-fit w-full",
+  className,
   children,
 }) => {
   return (

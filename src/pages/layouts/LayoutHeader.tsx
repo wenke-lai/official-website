@@ -1,6 +1,5 @@
 import React from "react";
-import { TbMenu2, TbMoon, TbSun } from "react-icons/tb";
-import { useTheme } from "src/hooks/theme-hook";
+import { TbMenu2 } from "react-icons/tb";
 
 import { cn } from "src/utils/styles";
 
@@ -10,20 +9,24 @@ type NavItem = {
 };
 
 type LayoutHeaderProps = {
+  className?: string;
   title: string;
   navItems: NavItem[];
 };
 
-const LayoutHeader: React.FC<LayoutHeaderProps> = ({ title, navItems }) => {
-  const { theme, setTheme } = useTheme();
-
+const LayoutHeader: React.FC<LayoutHeaderProps> = ({
+  className,
+  title,
+  navItems,
+}) => {
   return (
     <header
       className={cn(
         // Size
-        "min-h-16 max-h-fit container",
+        "min-h-16 max-h-fit",
         // Layout
-        "row middle between md:around gap-4"
+        "row middle between gap-4",
+        className
       )}
     >
       {/* Logo or Title */}
@@ -48,15 +51,6 @@ const LayoutHeader: React.FC<LayoutHeaderProps> = ({ title, navItems }) => {
       <nav className="block md:hidden">
         <TbMenu2 />
       </nav>
-
-      <button
-        type="button"
-        onClick={() => {
-          theme === "dark" ? setTheme("light") : setTheme("dark");
-        }}
-      >
-        {theme === "dark" ? <TbSun /> : <TbMoon />}
-      </button>
     </header>
   );
 };
