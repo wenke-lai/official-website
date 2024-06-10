@@ -26,11 +26,11 @@ function App() {
       />
 
       <Layouts.Content className="">
-        <Layouts.ContentSection id="hero" className="grid py-16 min-h-dvh ">
+        <Layouts.ContentSection id="hero" className="grid py-16 min-h-dvh">
           <Hero />
         </Layouts.ContentSection>
 
-        <Layouts.ContentSection id="services">
+        <Layouts.ContentSection id="services" className="grid py-8">
           <Services />
         </Layouts.ContentSection>
 

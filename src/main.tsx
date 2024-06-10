@@ -9,7 +9,7 @@ import "src/index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ThemeProvider defaultTheme="system">
+    <ThemeProvider defaultTheme="dark">
       <App />
     </ThemeProvider>
   </React.StrictMode>
