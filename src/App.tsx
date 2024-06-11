@@ -42,7 +42,7 @@ function App() {
           <Portfolio />
         </Layouts.ContentSection>
 
-        <Layouts.ContentSection id="contact">
+        <Layouts.ContentSection id="contact" className="grid py-8">
           <Contact />
         </Layouts.ContentSection>
 
