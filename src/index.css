@@ -1,3 +1,5 @@
+@import "src/styles/flex.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -70,7 +72,59 @@
   * {
     @apply border-border;
   }
+
+  html {
+    @apply scroll-smooth;
+  }
   body {
     @apply bg-background text-foreground;
+    font-family: "Nunito Variable", sans-serif;
+  }
+
+  h1 {
+    @apply text-2xl md:text-3xl xl:text-4xl;
+    @apply font-extrabold;
+  }
+  h2 {
+    @apply text-xl md:text-2xl xl:text-3xl;
+    @apply font-extrabold;
+  }
+  h3 {
+    @apply text-lg md:text-xl xl:text-2xl;
+    @apply font-bold;
+  }
+  h4 {
+    @apply text-base md:text-lg xl:text-xl;
+    @apply font-bold;
+  }
+  h5 {
+    @apply text-sm md:text-base xl:text-lg;
+    @apply font-semibold;
+  }
+  h6 {
+    @apply text-xs md:text-sm xl:text-base;
+    @apply font-semibold;
+  }
+  p {
+    @apply text-xs md:text-sm xl:text-base;
+  }
+
+  button,
+  a,
+  span {
+    @apply text-xs md:text-sm xl:text-base;
+  }
+
+  button {
+    /* click event */
+    @apply active:scale-95;
+    /* default style */
+    @apply px-2 py-1 border rounded-full border-foreground;
+  }
+}
+
+@layer utilities {
+  .debug {
+    @apply border border-red-500;
   }
 }
