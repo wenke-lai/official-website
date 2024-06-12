@@ -77,8 +77,8 @@ const PortfolioSnapshot: React.FC<PortfolioSnapshotProps> = ({ images }) => {
         ))}
       </div>
       <div className="p-4 row between middle">
-        <TbChevronLeft size={28} />
-        <TbChevronRight size={28} />
+        <TbChevronLeft />
+        <TbChevronRight />
       </div>
     </div>
   );
