@@ -20,13 +20,16 @@ function App() {
   return (
     <Layouts.Layout className="relative px-8 max-w-[1366px]">
       <Layouts.Header
-        className="absolute inset-x-0 top-0 px-8"
+        className="absolute inset-x-0 top-0 h-24 px-8"
         title="Wenke Studio"
         navItems={navItems}
       />
 
       <Layouts.Content>
-        <Layouts.ContentSection id="hero" className="grid py-16 min-h-dvh">
+        <Layouts.ContentSection
+          id="hero"
+          className="grid py-16 pt-24 min-h-dvh"
+        >
           <Hero />
         </Layouts.ContentSection>
 

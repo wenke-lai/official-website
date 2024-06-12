@@ -10,7 +10,7 @@ import { Avatar, AvatarImage } from "src/components/ui/avatar";
 
 const HeroInformation = () => {
   return (
-    <div className="order-1 p-4 md:order-0 md:pl-16">
+    <div className="order-1 md:order-0">
       <hgroup>
         <h2>Hi, I'm Wenke Lai</h2>
         <h3 className="text-green-500">Software Engineer</h3>
@@ -48,8 +48,8 @@ const HeroInformation = () => {
 
 const HeroAvatar = () => {
   return (
-    <div className="order-0 md:order-1 row center">
-      <Avatar className="w-2/3">
+    <div className="order-0 md:order-1 row center md:end">
+      <Avatar className="w-2/3 md:w-full xl:w-2/3">
         <AvatarImage src={whoami} alt="who am i" />
       </Avatar>
     </div>
@@ -86,7 +86,7 @@ const HeroSummary = () => {
 const Hero = () => {
   return (
     <div className="grid grid-rows-[1fr,auto]">
-      <div className="grid grid-cols-1 gap-8 md:gap-24 md:grid-cols-2 place-items-center">
+      <div className="grid grid-cols-1 gap-0 md:gap-8 xl:gap-24 md:grid-cols-2 place-items-center">
         <HeroInformation />
         <HeroAvatar />
       </div>
