@@ -6,16 +6,23 @@ import {
   TbMail,
 } from "react-icons/tb";
 import whoami from "src/assets/whoami.jpg";
+import Typing from "src/components/animation/typing";
 import { Avatar, AvatarImage } from "src/components/ui/avatar";
 import HeroSummary from "./HeroSummary";
 
 const HeroInformation = () => {
   return (
     <div className="order-1 md:order-0">
-      <hgroup>
-        <h2>Hi, I'm Wenke Lai</h2>
-        <h3 className="text-green-500">Software Engineer</h3>
+      <hgroup className="gap-4 row">
+        <h2>Hi, I'm </h2>
+        <h2 className="text-transparent scale-105 bg-gradient-to-b from-sky-300 to-blue-700 bg-clip-text">
+          Wenke Lai
+        </h2>
       </hgroup>
+      <Typing
+        label="Software Engineer"
+        className="text-3xl font-bold text-emerald-600 md:text-4xl xl:text-5xl"
+      />
       <p className="py-8">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
