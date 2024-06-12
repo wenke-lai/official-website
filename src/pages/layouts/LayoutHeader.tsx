@@ -31,7 +31,9 @@ const LayoutHeader: React.FC<LayoutHeaderProps> = ({
     >
       {/* Logo or Title */}
       <hgroup>
-        <h1>{title}</h1>
+        <h1 className="text-transparent bg-gradient-to-br from-blue-500 to-green-500 bg-clip-text">
+          {title}
+        </h1>
       </hgroup>
 
       {/* NavBar */}
