@@ -18,9 +18,9 @@ function App() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <Layouts.Layout className="relative px-4">
+    <Layouts.Layout className="relative px-8 max-w-[1366px]">
       <Layouts.Header
-        className="absolute inset-x-0 top-0 px-4"
+        className="absolute inset-x-0 top-0 px-8"
         title="Wenke Studio"
         navItems={navItems}
       />
