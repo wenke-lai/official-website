@@ -7,6 +7,7 @@ import {
 } from "react-icons/tb";
 import whoami from "src/assets/whoami.jpg";
 import { Avatar, AvatarImage } from "src/components/ui/avatar";
+import HeroSummary from "./HeroSummary";
 
 const HeroInformation = () => {
   return (
@@ -52,33 +53,6 @@ const HeroAvatar = () => {
       <Avatar className="w-2/3 md:w-full xl:w-2/3">
         <AvatarImage src={whoami} alt="who am i" />
       </Avatar>
-    </div>
-  );
-};
-
-const HeroSummary = () => {
-  return (
-    <div className="grid grid-cols-2 md:grid-cols-4 min-h-32 place-items-center">
-      <div className="gap-2 row middle">
-        {/* todo: auto calculate */}
-        <h3>10</h3>
-        <p>Years of experience</p>
-      </div>
-      <div className="gap-2 row middle">
-        {/* todo: GitHub API? */}
-        <h3>12</h3>
-        <p>Projects completed</p>
-      </div>
-      <div className="gap-2 row middle">
-        {/* todo: GitHub API? */}
-        <h3>34</h3>
-        <p>Targets</p>
-      </div>
-      <div className="gap-2 row middle">
-        {/* todo: GitHub API? */}
-        <h3>567</h3>
-        <p>code commits</p>
-      </div>
     </div>
   );
 };
