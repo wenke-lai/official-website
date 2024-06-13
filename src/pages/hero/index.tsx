@@ -6,7 +6,8 @@ import {
   TbMail,
 } from "react-icons/tb";
 import whoami from "src/assets/whoami.jpg";
-import Typing from "src/components/animation/typing";
+import BlinkingCursor from "src/components/BlinkingCursor";
+import RepeatTyping from "src/components/animation/repeat-typing";
 import { Avatar, AvatarImage } from "src/components/ui/avatar";
 import HeroSummary from "./HeroSummary";
 
@@ -14,23 +15,25 @@ const HeroInformation = () => {
   return (
     <div className="order-1 md:order-0">
       <hgroup className="gap-4 row">
-        <h2>Hi, I'm </h2>
+        <h2>Hello, it's </h2>
         <h2 className="text-transparent scale-105 bg-gradient-to-b from-sky-300 to-blue-700 bg-clip-text">
           Wenke Lai
         </h2>
       </hgroup>
-      <Typing
-        label="Software Engineer"
-        className="text-3xl font-bold text-emerald-600 md:text-4xl xl:text-5xl"
-      />
-      <p className="py-8">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+      <div className="">
+        <p className="inline pr-2 text-xl md:text-2xl xl:text-3xl">I'm a</p>
+        <RepeatTyping
+          texts={["Cloud Engineer", "Web Developer", "Backend Developer"]}
+          className="text-xl font-bold text-emerald-500 md:text-2xl xl:text-3xl"
+        />
+        <BlinkingCursor className="ml-1 bg-emerald-500" />
+      </div>
+      <p className="pt-8 text-base md:text-lg xl:text-xl">
+        I excel at designing cloud architecture solutions and implementing
+        monitoring and auditing systems.
+      </p>
+      <p className="pb-8 text-base md:text-lg xl:text-xl">
+        Additionally, I am proficient in <b>Python</b> and <b>JavaScript</b>.
       </p>
       <div className="gap-4 py-4 text-xl row middle">
         <button className="gap-2 row middle center hover:bg-sky-500/50">

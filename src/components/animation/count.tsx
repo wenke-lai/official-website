@@ -15,6 +15,7 @@ const Count: React.FC<CountProps> = ({ className, max, duration = 1 }) => {
     const animation = animate(count, max, { duration });
 
     return animation.stop;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <motion.p className={className}>{rounded}</motion.p>;
