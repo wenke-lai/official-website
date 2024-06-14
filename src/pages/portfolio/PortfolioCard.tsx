@@ -25,7 +25,7 @@ const PortfolioInfo: React.FC<PortfolioInfoProps> = ({
   github,
 }) => {
   return (
-    <div className="grid grid-rows-[auto,1fr,auto]">
+    <div className="grid grid-rows-[auto,1fr,auto,auto]">
       <hgroup className="py-4">
         <h3
           className={cn(
@@ -39,26 +39,24 @@ const PortfolioInfo: React.FC<PortfolioInfoProps> = ({
         <h3>{title}</h3>
       </hgroup>
       <p>{description}</p>
-      <div>
-        <menu className="gap-4 py-4 text-sky-500 row">
-          {skills.map((skill, index) => (
-            <li key={index}>
-              <h5>#{skill}</h5>
-            </li>
-          ))}
-        </menu>
-        <div className="gap-4 py-4 border-t-2 border-foreground/50 row middle">
-          {website && (
-            <a href={website}>
-              <TbExternalLink />
-            </a>
-          )}
-          {github && (
-            <a href={github} className="text-3xl">
-              <TbBrandGithubFilled />
-            </a>
-          )}
-        </div>
+      <menu className="flex-wrap gap-4 py-4 text-sky-500 row">
+        {skills.map((skill, index) => (
+          <li key={index}>
+            <h5>#{skill}</h5>
+          </li>
+        ))}
+      </menu>
+      <div className="gap-4 py-4 border-t-2 border-foreground/50 row middle">
+        {website && (
+          <a href={website}>
+            <TbExternalLink />
+          </a>
+        )}
+        {github && (
+          <a href={github} className="text-3xl">
+            <TbBrandGithubFilled />
+          </a>
+        )}
       </div>
     </div>
   );
