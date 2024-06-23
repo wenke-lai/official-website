@@ -17,25 +17,27 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     <article
       className={cn(
         // size
-        "h-full gap-4 p-4 min-h-32",
+        "h-full p-4 min-h-32 divide-y-2",
         // colors
-        "border-b-4  rounded-md  border-sky-300 ",
+        "border rounded-md ",
         // clickable
-        " hover:cursor-pointer active:scale-95"
+        "hover:cursor-pointer hover:scale-110 active:scale-95"
       )}
     >
-      <div className="pb-4 row between">
+      <div className="pb-2 row between">
         <hgroup className="">
-          <h3>{index}</h3>
           <h3>{title}</h3>
+          <h6>{subtitle}</h6>
         </hgroup>
-        <span className="text-4xl">{icon}</span>
+        <span>{icon}</span>
       </div>
-      <menu className="list-disc">
+      <ul className="pt-4 pl-4 list-disc list-outside">
         {menuItems.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} className="list-item">
+            {item}
+          </li>
         ))}
-      </menu>
+      </ul>
     </article>
   );
 };
