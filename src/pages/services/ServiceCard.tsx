@@ -1,15 +1,15 @@
 import { cn } from "src/utils/styles";
 
 type ServiceCardProps = {
-  index: string;
   title: string;
+  subtitle: string;
   icon: React.ReactNode;
   menuItems: string[];
 };
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
-  index,
   title,
+  subtitle,
   icon,
   menuItems,
 }) => {

@@ -1,62 +1,47 @@
 // import { TbBrandAws, TbBrandPython, TbBrandReact } from "react-icons/tb";
-import {
-  TbActivity,
-  TbBrowser,
-  TbCloudComputing,
-  TbServer,
-} from "react-icons/tb";
+import { TbActivity, TbBrowser, TbCloudComputing } from "react-icons/tb";
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {
   return (
     <div className="">
-      <hgroup>
+      <hgroup className="pb-8">
         <h2>Services</h2>
         <h3 className="underline decoration-green-500">How can I help your?</h3>
       </hgroup>
 
-      <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 md:p-16">
+      <div className="grid grid-cols-3 gap-8">
         <ServiceCard
-          index="01"
-          title="Cloud Architecture"
-          icon={<TbCloudComputing />}
+          title="Cloud Solutions"
+          subtitle="Maximize cloud potential with our tailored solutions"
+          icon={<TbCloudComputing className="text-4xl text-green-400" />}
           menuItems={[
-            "System Design and Blueprinting",
-            "Cloud Strategy and Planning",
-            "Security and Compliance Design",
+            "Design scalable and efficient cloud architectures",
+            "Develop strategic roadmaps for seamless cloud adoption",
+            "Ensure robust security and compliance frameworks",
           ]}
         />
 
         <ServiceCard
-          index="02"
-          title="Cloud Infrastructure"
-          icon={<TbActivity />}
+          title="DevOps Consulting"
+          subtitle="Accelerate your development lifecycle with our expert DevOps services"
+          icon={<TbActivity className="text-4xl text-sky-500" />}
           menuItems={[
-            "Resource Deployment and Management",
-            "Monitoring and Troubleshooting",
-            "Automation and Configuration Management",
+            "Streamline deployment and resource management processes",
+            "Resolve issues rapidly with proactive monitoring and troubleshooting",
+            "Enhance operational efficiency through automation and configuration management",
           ]}
         />
 
         <ServiceCard
-          index="03"
           title="Web Development"
-          icon={<TbBrowser />}
+          subtitle="Create robust and scalable systems to power your applications"
+          icon={<TbBrowser className="text-4xl text-orange-500" />}
           menuItems={[
-            "User Interface Development",
-            "User Experience Optimization",
-            "Frontend-Backend Integration",
-          ]}
-        />
-
-        <ServiceCard
-          index="04"
-          title="Backend Development"
-          icon={<TbServer />}
-          menuItems={[
-            "Server-Side Development",
-            "Database Management",
-            "Frontend-Backend Integration",
+            "Design intuitive and engaging user interfaces",
+            "Develop reliable and scalable backend solutions",
+            "Ensure seamless communication between frontend and backend",
+            "Provide efficient database design and management",
           ]}
         />
       </div>
