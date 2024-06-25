@@ -51,6 +51,7 @@ function App() {
 
         {/* PoC for demo */}
         <button
+          aria-label="scroll to top"
           className="fixed w-8 h-8 border rounded-md right-8 bottom-8 row middle center border-foreground"
           onClick={() => window.scrollTo({ top: 0 })}
         >
@@ -58,6 +59,7 @@ function App() {
         </button>
 
         <button
+          aria-label="toggle theme"
           className="fixed w-8 h-8 border rounded-full right-8 bottom-24 row middle center border-foreground"
           onClick={() =>
             theme === "dark" ? setTheme("light") : setTheme("dark")

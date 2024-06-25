@@ -3,13 +3,13 @@ import { cn } from "src/utils/styles";
 type ResumeCardToggleProps = {
   on: boolean;
   onClick: () => void;
-  children: React.ReactNode;
+  label: string;
 };
 
 const ResumeCardToggle: React.FC<ResumeCardToggleProps> = ({
   on,
   onClick,
-  children,
+  label,
 }) => {
   return (
     <button
@@ -17,8 +17,9 @@ const ResumeCardToggle: React.FC<ResumeCardToggleProps> = ({
         "bg-green-500": on,
       })}
       onClick={onClick}
+      aria-label={label}
     >
-      {children}
+      {label}
     </button>
   );
 };

@@ -36,20 +36,23 @@ const HeroInformation = () => {
         Additionally, I am proficient in <b>Python</b> and <b>JavaScript</b>.
       </p>
       <div className="gap-4 py-4 text-xl row middle">
-        <button className="gap-2 row middle center hover:bg-sky-500/50">
+        <button
+          className="gap-2 row middle center hover:bg-sky-500/50"
+          aria-label="download CV"
+        >
           <p className="">Download CV</p>
           <TbDownload />
         </button>
-        <button className="py-2 hover:bg-sky-500/50">
+        <button className="py-2 hover:bg-sky-500/50" aria-label="github">
           <TbBrandGithub />
         </button>
-        <button className="py-2 hover:bg-sky-500/50">
+        <button className="py-2 hover:bg-sky-500/50" aria-label="threads">
           <TbBrandThreads />
         </button>
-        <button className="py-2 hover:bg-sky-500/50">
+        <button className="py-2 hover:bg-sky-500/50" aria-label="linkedin">
           <TbBrandLinkedin />
         </button>
-        <button className="py-2 hover:bg-sky-500/50">
+        <button className="py-2 hover:bg-sky-500/50" aria-label="email">
           <TbMail />
         </button>
       </div>
