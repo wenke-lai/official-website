@@ -23,7 +23,7 @@ const HeroInformation = () => {
       <div className="">
         <p className="inline pr-2 text-xl md:text-2xl xl:text-3xl">I'm a</p>
         <RepeatTyping
-          texts={["Cloud Engineer", "Web Developer", "Backend Developer"]}
+          texts={["Cloud Engineer", "Web Developer"]}
           className="text-xl font-bold text-emerald-500 md:text-2xl xl:text-3xl"
         />
         <BlinkingCursor className="ml-1 bg-emerald-500" />
