@@ -19,6 +19,15 @@ def index() -> rx.Component:
         main=main(
             rx.center(
                 rx.text("Hello, World!"),
+                class_name="bg-gray-900 h-96",
+            ),
+            rx.center(
+                rx.text("Hello, World!"),
+                class_name="bg-gray-800/80 h-96",
+            ),
+            rx.center(
+                rx.text("Hello, World!"),
+                class_name="bg-gray-900 h-96",
             ),
         ),
         footer=footer(
